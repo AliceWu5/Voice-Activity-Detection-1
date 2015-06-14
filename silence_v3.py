@@ -4,8 +4,12 @@
 import os, sys
 
 
-def write_to_file(array_1, array_2):
-  f = open('../silences.txt','w')
+def write_to_file1(array_1, array_2):
+  f = open('../silences1.txt','w')
+def write_to_file2(array_1, array_2):
+  f = open('../silences2.txt','w')
+def write_to_file3(array_1, array_2):
+  f = open('../silences3.txt','w')
   for i in range (0,len(array_1)):
    #string1 = str(array_1[i]) + ' ' + str(array_2[i]) + ' ' + 'SIL' + '\n'
    print i, float(array_1[i])/float(200) , float(array_2[i])/float(200)
@@ -54,7 +58,9 @@ def convert(folder):
          breaks, start = get_breaks(start_silence)   
          print start
          print  breaks  
-         write_to_file(start,breaks)                  
+         write_to_file1(start,breaks)  
+         write_to_file2(start,breaks)  
+         write_to_file3(start,breaks)                  
 
 
 if __name__ == '__main__':
